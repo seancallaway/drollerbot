@@ -1,3 +1,13 @@
+"""
+    bot.py
+    ~~~~~~
+
+    Exposes the `thebot` object and does parsing of bot 
+    commands.
+
+    :copyright: (c) 2017 by Sean Callaway.
+    :license: MIT, see LICENSE for more details.
+"""
 import discord
 from discord.ext.commands import Bot
 from .die import Die
