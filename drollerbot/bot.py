@@ -10,6 +10,7 @@
 """
 import discord
 from discord.ext.commands import Bot
+from laughs import get_joke
 from .die import Die
 
 thebot = Bot(command_prefix=".")
@@ -75,3 +76,8 @@ async def hello(*args):
 async def roll(*, rawdice: str):
     result = do_roll(rawdice)
     return await thebot.say(result)
+
+@thebot.command()
+async def joke(*args):
+    joke = get_joke()
+    return await thebot.say(joke)
