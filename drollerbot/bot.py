@@ -84,7 +84,7 @@ async def joke(*args):
     joke = get_joke()
     return await thebot.say(joke)
 
-@thebot.comman()
+@thebot.command()
 async def magic8ball(*args):
     result = m8b.shake()
     return await thebot.say(result)
