@@ -1,15 +1,15 @@
 """
-    8ball.py
+    magicball.py
     ~~~~~~~~
 
-    Exposes the `8Ball` object
+    Exposes the `MagicBall` object.
 
     :copyright: (c) 2017 by Sean Callaway.
     :license: MIT, see LICENSE for more details.
 """
 import random
 
-class 8Ball(object):
+class MagicBall(object):
     """Defines a magic 8 ball."""
 
     def __init__(self):
