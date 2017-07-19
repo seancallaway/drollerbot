@@ -12,8 +12,10 @@ import discord
 from discord.ext.commands import Bot
 from laughs import get_joke
 from .die import Die
+from .8ball import 8Ball
 
 thebot = Bot(command_prefix=".")
+m8b = 8Ball()
 
 def do_roll(commands):
     """Perform the roll calculations."""
@@ -81,3 +83,8 @@ async def roll(*, rawdice: str):
 async def joke(*args):
     joke = get_joke()
     return await thebot.say(joke)
+
+@thebot.comman()
+async def 8ball(*args):
+    result = m8b.shake()
+    return await thebot.say(result)
